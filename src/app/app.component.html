@@ -1,0 +1,18 @@
+<!-- <p *ngIf="isVisible">{{title}}</p>
+<p *ngFor="let item of listaNomi">{{item}}</p>
+<button class="btn btn-primary" (click)="cambiaTitolo()">Cambia titolo</button>
+<button class="ml-2 btn btn-primary" (click)="toggle()">Nascondi/visualizza</button>
+ -->
+
+<div class="container">
+  <div class="row">
+    <div class="col-6">
+      <h3>Singola</h3>
+      <app-datatable [lista]="listSoggetti" [options]="options" [selectionMode]="'single'"></app-datatable>
+    </div>
+    <div class="col-6">
+      <h3>Multipla</h3>
+      <app-datatable [lista]="listSoggetti" [options]="options" [selectionMode]="'multiple'"></app-datatable>
+    </div>
+  </div>
+</div>

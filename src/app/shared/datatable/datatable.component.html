@@ -1,0 +1,15 @@
+<table class="table">
+  <thead class="thead-dark">
+    <tr>
+      <th scope="col">#</th>
+      <th *ngFor="let option of options.colsOptions" scope="col">{{option.label}}</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let soggetto of lista;let i = index" (click)="select(i)" class="cursor-point"
+      [ngClass]="{'bg-primary text-white':currentIndex[i]}">
+      <th scope="row">{{i + 1}}</th>
+      <td *ngFor="let option of options.colsOptions">{{soggetto[option.name]}}</td>
+    </tr>
+  </tbody>
+</table>
